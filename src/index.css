@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 260 100% 5%;
+    --foreground: 260 10% 95%;
+
+    --card: 260 100% 10%;
+    --card-foreground: 260 10% 95%;
+ 
+    --popover: 260 100% 5%;
+    --popover-foreground: 260 10% 95%;
+ 
+    --primary: 260 100% 50%;
+    --primary-foreground: 260 10% 95%;
+ 
+    --secondary: 270 100% 60%;
+    --secondary-foreground: 260 10% 95%;
+ 
+    --muted: 260 50% 20%;
+    --muted-foreground: 260 10% 70%;
+ 
+    --accent: 280 100% 70%;
+    --accent-foreground: 260 10% 95%;
+ 
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 260 10% 95%;
+ 
+    --border: 260 50% 30%;
+    --input: 260 50% 30%;
+    --ring: 280 100% 70%;
+ 
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-crypto {
+    background-image: radial-gradient(circle at center, rgba(128, 0, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%),
+                      linear-gradient(to right, rgba(128, 0, 255, 0.1) 0%, rgba(0, 0, 255, 0.1) 100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .flex.justify-center.space-x-8 {
+    flex-direction: column;
+    align-items: center;
+    space-x: 0;
+    space-y: 2rem;
+  }
+}
+
